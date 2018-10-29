@@ -1,10 +1,14 @@
-import os
 from flask import Flask, request, redirect
+from flask_sqlalchemy import SQLAlchemy
+import os
 from webhook_parser import *
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
-print(os.environ['APP_SETTINGS'])
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+from models import Result
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
