@@ -1,7 +1,7 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-class Cofing(object):
+class Config(object):
     DEBUG = False
     TESTING = False
     CSRF_ENABLED = True
