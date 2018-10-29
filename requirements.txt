@@ -24,5 +24,4 @@ python-editor==1.0.3
 scandir==1.9.0
 six==1.11.0
 SQLAlchemy==1.2.12
--e git+git@github.com:ariua91/trello-webhook.git@e65f0eaf323ac3542018b11abaf96cf8d8827c24#egg=trello_parser
 Werkzeug==0.14.1
