@@ -1,9 +1,10 @@
-# from trello import TrelloClient
-# import json
+import os
 from flask import Flask, request, redirect
 from webhook_parser import *
 
 app = Flask(__name__)
+app.config.from_object(os.environ['APP_SETTINGS'])
+print(os.environ['APP_SETTINGS'])
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
