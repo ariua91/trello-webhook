@@ -13,7 +13,7 @@ class ProductionConfig(Config):
     DEBUG = False
 
 
-class StagingCongif(Config):
+class StagingConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
 
